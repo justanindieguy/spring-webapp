@@ -1,7 +1,7 @@
 package com.justanindieguy.webapp.services;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.ApplicationScope;
 
 import com.justanindieguy.webapp.models.Contact;
 
@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-@RequestScope
+@ApplicationScope
 public class ContactService {
 
     private int counter = 0;
