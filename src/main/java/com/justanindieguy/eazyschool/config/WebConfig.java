@@ -1,4 +1,4 @@
-package com.justanindieguy.webapp.config;
+package com.justanindieguy.eazyschool.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.lang.NonNull;
