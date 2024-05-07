@@ -1,4 +1,4 @@
-package com.justanindieguy.webapp.controller;
+package com.justanindieguy.eazyschool.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;

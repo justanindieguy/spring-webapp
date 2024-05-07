@@ -1,4 +1,4 @@
-package com.justanindieguy.webapp.models;
+package com.justanindieguy.eazyschool.models;
 
 import lombok.Data;
 
