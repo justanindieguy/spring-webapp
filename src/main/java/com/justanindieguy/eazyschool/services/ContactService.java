@@ -1,9 +1,9 @@
-package com.justanindieguy.webapp.services;
+package com.justanindieguy.eazyschool.services;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
-import com.justanindieguy.webapp.models.Contact;
+import com.justanindieguy.eazyschool.models.Contact;
 
 import lombok.extern.slf4j.Slf4j;
 
