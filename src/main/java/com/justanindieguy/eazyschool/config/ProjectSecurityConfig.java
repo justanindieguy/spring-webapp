@@ -14,16 +14,17 @@ public class ProjectSecurityConfig {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(requests -> requests
-                .requestMatchers("/dashboard").authenticated()
-                .requestMatchers("/", "/home").permitAll()
-                .requestMatchers("/holidays").permitAll()
-                .requestMatchers("/contact").permitAll()
-                .requestMatchers("/saveMsg").permitAll()
-                .requestMatchers("/courses").permitAll()
-                .requestMatchers("/about").permitAll()
-                .requestMatchers("/login").permitAll()
-                .requestMatchers("/assets/**").permitAll())
+        http.csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(requests -> requests
+                        .requestMatchers("/dashboard").authenticated()
+                        .requestMatchers("/", "/home").permitAll()
+                        .requestMatchers("/holidays").permitAll()
+                        .requestMatchers("/contact").permitAll()
+                        .requestMatchers("/saveMsg").permitAll()
+                        .requestMatchers("/courses").permitAll()
+                        .requestMatchers("/about").permitAll()
+                        .requestMatchers("/login").permitAll()
+                        .requestMatchers("/assets/**").permitAll())
                 .formLogin(loginConfigurer -> loginConfigurer
                         .loginPage("/login")
                         .defaultSuccessUrl("/dashboard")
