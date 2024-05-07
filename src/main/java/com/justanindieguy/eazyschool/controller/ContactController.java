@@ -1,4 +1,4 @@
-package com.justanindieguy.webapp.controller;
+package com.justanindieguy.eazyschool.controller;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.justanindieguy.webapp.models.Contact;
-import com.justanindieguy.webapp.services.ContactService;
+import com.justanindieguy.eazyschool.models.Contact;
+import com.justanindieguy.eazyschool.services.ContactService;
 
 @Slf4j
 @Controller
