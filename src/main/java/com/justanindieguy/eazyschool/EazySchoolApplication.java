@@ -1,4 +1,4 @@
-package com.justanindieguy.webapp;
+package com.justanindieguy.eazyschool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-public class WebappApplication {
+public class EazySchoolApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebappApplication.class, args);
+        SpringApplication.run(EazySchoolApplication.class, args);
     }
 
 }
