@@ -1,4 +1,4 @@
-package com.justanindieguy.webapp.models;
+package com.justanindieguy.eazyschool.models;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -17,10 +17,10 @@ public class Contact {
     /*
      * @NotNull: Checks if a given field is not null but allows empty values & zero
      * elements inside collections.
-     * 
+     *
      * @NotEmpty: Checks if a given field is not null and its size/length is greater
      * than zero.
-     * 
+     *
      * @NotBlank: Checks if a given field is not null and trimmed length is greater
      * than zero.
      */
