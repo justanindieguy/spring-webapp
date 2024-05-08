@@ -7,5 +7,5 @@
   },
   "java.dependency.packagePresentation": "hierarchical",
   "java.configuration.updateBuildConfiguration": "automatic",
-  "cSpell.words": ["Eazy", "eazyschool"]
+  "cSpell.words": ["Eazy", "eazyschool", "Servlet"]
 }
