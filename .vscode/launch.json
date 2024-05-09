@@ -9,11 +9,11 @@
     },
     {
       "type": "java",
-      "name": "Spring Boot-WebappApplication<webapp>",
+      "name": "Spring Boot-EazySchoolApplication<eazyschool>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "mainClass": "com.justanindieguy.webapp.WebappApplication",
-      "projectName": "webapp",
+      "mainClass": "com.justanindieguy.eazyschool.EazySchoolApplication",
+      "projectName": "eazyschool",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
     }
