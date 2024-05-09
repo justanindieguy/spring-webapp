@@ -5,6 +5,10 @@
     "editor.tabSize": 4,
     "editor.detectIndentation": false
   },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+    "files.trimFinalNewlines": true
+  },
   "java.dependency.packagePresentation": "hierarchical",
   "java.configuration.updateBuildConfiguration": "automatic",
   "cSpell.words": ["Eazy", "eazyschool", "Servlet"]
