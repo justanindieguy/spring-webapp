@@ -1,14 +1,23 @@
 package com.justanindieguy.eazyschool.services;
 
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.justanindieguy.eazyschool.constants.EazySchoolConstants;
 import com.justanindieguy.eazyschool.models.Contact;
+import com.justanindieguy.eazyschool.repository.ContactRepository;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Service
 public class ContactService {
+
+    private final ContactRepository contactRepository;
+
+    @Autowired
+    public ContactService(ContactRepository contactRepository) {
+        this.contactRepository = contactRepository;
+    }
 
     /**
      * Save contact details into DB
@@ -17,10 +26,16 @@ public class ContactService {
      * @return boolean
      */
     public boolean saveMessageDetails(Contact contact) {
-        boolean isSaved = true;
+        boolean isSaved = false;
+        contact.setStatus(EazySchoolConstants.OPEN);
+        contact.setCreatedBy(EazySchoolConstants.ANONYMOUS);
+        contact.setCreatedAt(LocalDateTime.now());
 
-        // TODO - Need to persists the table into the DB table.
-        log.info(contact.toString());
+        int result = contactRepository.saveContactMsg(contact);
+
+        if (result > 0) {
+            isSaved = true;
+        }
 
         return isSaved;
     }
