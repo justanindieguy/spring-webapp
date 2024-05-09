@@ -4,7 +4,9 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /*
  * @Data annotation is provided by Lombok library which generates getters, setters,
@@ -12,7 +14,10 @@ import lombok.Data;
  * This makes our code short and clean.
  */
 @Data
-public class Contact {
+@EqualsAndHashCode(callSuper = true)
+public class Contact extends BaseEntity {
+
+    private int contactId;
 
     /*
      * @NotNull: Checks if a given field is not null but allows empty values & zero
@@ -43,5 +48,7 @@ public class Contact {
     @NotBlank(message = "Message must not be blank")
     @Size(min = 10, message = "Message must be at least 10 characters long")
     private String message;
+
+    private String status;
 
 }
